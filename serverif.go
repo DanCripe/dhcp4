@@ -123,7 +123,7 @@ func NewServer() (*Server, error) {
 	return result, nil
 }
 
-func (d *Server) Close() {
+func (d *Server) Shutdown() {
 	d.Lock()
 	defer d.Unlock()
 	d.closed = true
